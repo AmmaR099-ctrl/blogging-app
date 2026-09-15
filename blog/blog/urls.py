@@ -1,7 +1,7 @@
 
 from django.contrib import admin
 from django.urls import path
-from blogapp.views import home,about,contact
+from blogapp.views import home,about,contact,post_detail
 
 
 urlpatterns = [
@@ -9,5 +9,6 @@ urlpatterns = [
     path('',home),
     path('about/',about),
     path('contact/',contact),
+    path('post/<int:post_id>/',post_detail),
     
 ]
